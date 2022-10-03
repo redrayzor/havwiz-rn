@@ -17,7 +17,10 @@ export const GpsInterface = props => {
   const [statusMessage, setStatusMessage] = useState(
     'Waiting for user action.',
   ); // message
-  const [currentPosition, setCurrentPosition] = useState(null); // store coords
+  const [currentPosition, setCurrentPosition] = useState({
+    latitude: null,
+    longitude: null,
+  }); // store coords
   const [isError, setIsError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
